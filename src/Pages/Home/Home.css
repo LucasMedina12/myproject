@@ -1,0 +1,36 @@
+.main{
+    height: 80vh;
+    display: flex;
+}
+
+
+.main h1, h5{
+    color: #fff;
+}
+
+.main-content{
+    position: relative;
+    top: 50%;
+    margin-left: 20px;
+    width: 50%;
+    display: block;
+}
+
+.main img{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gradient--vertical{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+
+.gradient--horizontal{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right, #111 30%, transparent 70%);
+}
