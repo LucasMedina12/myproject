@@ -1,7 +1,6 @@
 .main{
     height: 80vh;
     display: flex;
-    flex-direction: column;
 }
 
 
@@ -24,7 +23,7 @@
     position: relative;
     top: 30%;
     margin-left: 20px;
-    width: 70%;
+    width: 50%;
 }
 
 .main img{
@@ -41,7 +40,7 @@
 }
 
 .gradient--horizontal{
-    width: 100%;
+    width: inherit;
     height: inherit;
     background: linear-gradient(to right, #111 30%, transparent 70%);
 }
@@ -90,11 +89,3 @@
     right: -20px;
     transition: 0.4s;
   }
-
-.home li{
-    color: #fff;
-    font-style: none;
-    cursor: pointer;
-    display: inline-block;
-    margin: 5px 20px;
-}

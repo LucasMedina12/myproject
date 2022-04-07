@@ -3,7 +3,20 @@
     align-items: center;
     justify-content: space-between;
     position: fixed;
+    top: 0;
+    z-index: 999;
     width: 100%;
+    transition: all .5s ease-in-out;
+    background: transparent;
+}
+
+.header figure {
+    margin: 0 0 0 40px;
+}
+
+.active{
+    background: rgba(0, 0, 0, 0.9);
+    transition: all .5s ease-in-out;
 }
 
 .header-logo{

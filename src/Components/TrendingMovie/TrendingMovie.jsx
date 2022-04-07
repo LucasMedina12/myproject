@@ -1,23 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import './Home.css'
 import { useQuery } from 'react-query'
-import { getTrending, getGeneros } from '../../Services/getAll'
+import { GetMain, getGeneros } from '../../Services/getAll'
+import './style.css'
+import { URL_POSTER } from '../../Services/settings'
 
-const URL_POSTER = 'https://image.tmdb.org/t/p/original/'
 
-export default function Home () {
-
+export default function TrendingMovie(){
     const [ generos, setGeneros ] = useState([])
-    const { data: trending } = useQuery(["trending"], () => getTrending(1))
+    const { data: trending } = useQuery(["trending"], GetMain)
 
     useEffect( () => {
         getGeneros().then(res => setGeneros(res))
         console.log('render generos')
     }, [])
 
-
-    return (
-        <div className='home'>
+    return <>
         {
             trending && 
             <section className='main' style={{ 
@@ -39,16 +36,8 @@ export default function Home () {
                             <button className='css-button-arrow--grey'>MIRAR AHORA</button>
                         </div>
                     </div>
-                </div>    
+                </div>
             </section>
         }
-            <ul>
-                <li>Populares</li>
-                <li>Mejores Punteadas</li>
-                {
-                    generos.map(genero => <li>{genero.name}</li>)
-                }
-            </ul>     
-        </div>
-    )
+        </>
 }
