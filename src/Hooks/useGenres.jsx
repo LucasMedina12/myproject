@@ -1,10 +1,9 @@
-import { useState } from 'react'
 import { getGeneros } from '../Services/getAll'
+import { useQuery } from 'react-query'
 
 export const useGenres = () => {
-    const [ generos, setGeneros ] = useState([])
 
-    getGeneros().then(res => setGeneros(res))
+    const { data: generos } = useQuery(["generos"], getGeneros)
     
     return { generos }
 }
