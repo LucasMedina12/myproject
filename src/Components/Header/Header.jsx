@@ -3,13 +3,9 @@ import { Link } from 'wouter'
 import './Header.css'
 
 export const Header = () => {
-
     const [navbar, setNavbar] = useState(false)
-
     const changeBackground = () => window.scrollY >= 80 ? setNavbar(true) : setNavbar(false)
-
     window.addEventListener('scroll', changeBackground)
-
     return (
         <div className={navbar ? 'header active' : 'header'}>
             <figure className='header-logo'>

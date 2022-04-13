@@ -3,7 +3,9 @@ import { useQuery } from 'react-query'
 
 export const useGenres = () => {
 
-    const { data: generos } = useQuery(["generos"], getGeneros)
+    const { data: generos } = useQuery(["generos"], getGeneros, {
+        staleTime: Infinity
+    })
     
     return { generos }
 }

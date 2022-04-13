@@ -4,17 +4,24 @@
     flex-direction: column;
 }
 
-
-.main h1, h4, h3{
+.main h3{
     color: #fff;
 }
 
 .main h4{
+    color: #fff;
     display: inline-block;
     margin: 9px 15px 0 0;
 }
+.main h2{
+    color: #fff;
+    display: inline-block;
+    margin: 9px 15px 0 0;
+    text-align: center;
+}
 
 .main h1{
+    color: #fff;
     font-size: 30px;
     margin: 0 20px 0 0;
     display: inline-block;
@@ -22,7 +29,7 @@
 
 .main-content{
     position: relative;
-    top: 30%;
+    top: 45%;
     margin-left: 20px;
     width: 70%;
 }
